@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="style.css" rel="stylesheet">
+        <title>Pharz shopping site</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    </head>
+    <header>
+
+    </header>
+    <body>
+        <div class="header">
+        <div class="container">
+      <div class="navbar">
+      <div class="logo">
+        <img src="logo.png" width="70px">
+</div>
+<nav>
+    <ul id="MenuItems">
+        <li><a href="<DOCTYPE html>.html">Home</a></li>
+        <li><a href="productpage.html">Products</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="account.html">Account</a></li>
+    </ul>
+</nav>
+<img src="cart.png" width="25px" height="30px">
+<img src="menu.png" class="menu-icon" onclick="menutoggle()">
+</div>
+</div>
+<!--------account-page------>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="Footballer-PNG-Cutout.png" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                   <div class="form-btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="Indicator">
+                   </div>
+                   <form id="LoginForm"><input type="text" placeholder="username" required>
+                <input type="password" placeholder="password" required>
+                <button type="submit" class="btn">Login</button>
+                <a href="">Forgot password</a>
+                </form>
+                <form id="RegForm"><input type="text" placeholder="username" required>
+                    <form><input type="email" placeholder="example@gmail.com" required>
+                    <input type="password" placeholder="password" minlength="8"  required>
+                    <input type="password" placeholder="confirm password" minlength="8" required>
+                    <button type="submit" class="btn">Register</button>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-----footer---->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3> Download our app</h3>
+                <p>Download App for Mobile<br> and ios mobile phone.</p>
+                <div class="app-logo">
+                    <a href="https://play.google.com/"><img src="icons8-playstore-96.png" class="image1"></a>
+                    <a href="https://www.apple.com/app-store/"><img src="icons8-apple.gif" class="image2"></a>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="icons8-start-menu-96.png" class="image3">
+             <p> Our Purpose Is To Sustainably Make the Pleasure <br>and Benefits of Sports Accessible to Many.</p>
+         </div>
+
+        <div class="footer-col-3">
+            <h3> Useful links</h3>
+            <ul>
+                <li>Coupons</li>
+                <li>Bog Post</li>
+                <li>Return Policy</li>
+                <li>Join Affiliate</li>
+            </ul>
+        </div>
+        <div class="footer-col-4">
+            <h3> Follow us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Tiktok</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright 2023 - Pharz Shopping site</p>
+        </div>
+        </div>
+        <!-----------js for toggle menu-------------->
+
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle(){
+                if (MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else{
+                MenuItems.style.maxHeight = "0px"
+            }
+            }
+        </script>
+             </div>
+             <!-----------js for toggle form-------------->
+             <script>
+                var LoginForm = document.getElementById("LoginForm");
+                var RegForm = document.getElementById("RegForm");
+                var Indicator = document.getElementById("Indicator");
+                
+                function register(){
+                    RegForm.style.transform = "translateX(0px)";
+                    LoginForm.style.transform = "translateX(0px)";
+                    Indicator.style.transform = "translateX(100px)";
+
+                }
+                function login(){
+                    RegForm.style.transform = "translateX(300px)";
+                    LoginForm.style.transform = "translateX(300px)";
+                    Indicator.style.transform = "translateX(0px)";
+                }
+             </script>
+    </body>
+   
+    
+</html>
